@@ -440,6 +440,19 @@ if(document instanceof HTMLDocument)
 				f.submit()
 			}
 		})
+
+domainBypass("https://mvt.se/nyheter/motala/live-tv-vi-sander-live-fran-idolturnn-om5784215.aspx",()=>{
+{
+	ensureDomLoaded(function()
+	{
+		let button = document.getElementById("skip-button")
+		if(button != null)
+		{
+			button.click()
+		}
+	})
+})
+
 		domainBypass("ysear.ch",()=>{
 			let b=document.querySelector("#NextVideo[href]")
 			if(b)
